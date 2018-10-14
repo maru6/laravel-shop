@@ -7,18 +7,7 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-<<<<<<< HEAD
-class RegisteredListener
-{
 
-    public function handle(Registered $event)
-    {
-        $user = $event->user;
-
-        $user->notify(new EmailVerificationNotification());
-    }
-}
-=======
 // implements ShouldQueue 让这个监听器异步执行
 class RegisteredListener implements ShouldQueue
 {
@@ -31,4 +20,4 @@ class RegisteredListener implements ShouldQueue
         $user->notify(new EmailVerificationNotification());
     }
 }
->>>>>>> b761bc7375098edad89b552db124b7c74eb790a3
+
