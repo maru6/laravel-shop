@@ -1,4 +1,3 @@
-
 window._ = require('lodash');
 
 /**
@@ -53,3 +52,4 @@ if (token) {
 //     cluster: 'mt1',
 //     encrypted: true
 // });
+require('sweetalert');
