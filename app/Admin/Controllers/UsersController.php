@@ -3,32 +3,26 @@
 namespace App\Admin\Controllers;
 
 use App\Models\User;
-use App\Http\Controllers\Controller;
-use Encore\Admin\Controllers\HasResourceActions;
+
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
+use Encore\Admin\Facades\Admin;
 use Encore\Admin\Layout\Content;
-use Encore\Admin\Show;
+use App\Http\Controllers\Controller;
+use Encore\Admin\Controllers\ModelForm;
 
 class UsersController extends Controller
 {
-    use HasResourceActions;
+    use ModelForm;
 
-    /**
-     * Index interface.
-     *
-     * @param Content $content
-     * @return Content
-     */
-    public function index(Content $content)
+    public function index()
     {
         return Admin::content(function (Content $content) {
-            //页面标题
-            $content->header('用户列表')
+            // 页面标题
+            $content->header('用户列表');
             $content->body($this->grid());
         });
     }
-
 
     protected function grid()
     {
@@ -71,5 +65,5 @@ class UsersController extends Controller
                 });
             });
         });
-
+    }
 }
