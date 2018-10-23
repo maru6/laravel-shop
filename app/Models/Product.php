@@ -21,6 +21,7 @@ class Product extends Model
     	return $this->hasMany(ProductSku::class);
     }
 
+
     public function getImageUrlAttribute()
     {
         if (Str::startsWith($this->attributes['image'], ['http://', 'https://'])) {
