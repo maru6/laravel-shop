@@ -126,6 +126,12 @@ return [
 
     'log_level' => env('APP_LOG_LEVEL', 'debug'),
 
+    // delay_time*************
+    // 
+    // 
+    'order_ttl' => 1800,
+
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
