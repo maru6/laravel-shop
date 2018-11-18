@@ -32,3 +32,4 @@ Route::group(['middleware' => 'auth'], function() {
 });
 
 Route::get('products/{product}', 'ProductsController@show')->name('products.show');
+
